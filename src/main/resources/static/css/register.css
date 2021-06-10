@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #999;
+    font-size: x-small;
+}
+
+li{
+    list-style: none;
+}
+
+.header1{
+    height: 30px;
+    width: 100%;
+    background: #f2f2f2;
+
+}
+
+.header1 ul li{
+    float: left;
+    margin-left: 50px;
+}
+
+.header1 a{
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.header1 a:hover{
+    color: red;
+}
+
+.header2{
+    float: right;
+    margin-right: 200px;
+}
+
+.imagePosition{
+    position: absolute;
+    left: 100px;
+    top:100px
+}
+
+.formPosition{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+}

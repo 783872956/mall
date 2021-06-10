@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>天猫商城</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header" id="header">
+        <ul>
+            <li>
+                <a href="index.html"><i class="fa fa-link"></i>&nbsp;天猫首页</a>
+            </li>
+
+            <li>
+                <p id="user_name_show" v-bind:style="user_name_css">用户名：<span>{{user_name}}</span></p>
+            </li>
+            <li>
+                <a href="login.html">{{type}}</a>
+            </li>
+            <li>
+                <a href="register.html">{{type1}}</a>
+            </li>
+        </ul>
+
+        <span class="header1">
+            <a href="">我的订单</a>
+            <a href=""><i class="fa fa-shopping-cart"></i>&nbsp;购物车</a>
+        </span>
+    </div>
+
+    <div>
+        <a href="index.html">
+            <img src="image/logo.png" alt="" style="margin-left: 100px;margin-top: 30px">
+        </a>
+
+        <input type="text" class="inputPosition" placeholder="时尚男鞋 时尚女装">
+        <button type="submit" class="buttonPosition">搜索</button>
+
+        <div class="searchList">
+            <a href="">平衡车</a>
+            <span>|</span>
+            <a href="">扫地机器人</a>
+            <span>|</span>
+            <a href="">原汁机</a>
+            <span>|</span>
+            <a href="">冰箱</a>
+        </div>
+    </div>
+
+    <div>
+        <div class="list">
+            <div class="listName">
+                <i class="fa fa-th-list"></i>&nbsp;
+                <span>商品分类</span>
+            </div>
+            <div class="list-list">
+                <span class="list-width"><i class="fa fa-shopping-cart"></i>&nbsp;天猫超市</span>
+                <span class="list-width"><i class="fa fa-globe"></i>&nbsp;天猫国际</span>
+                <span class="list-width">平板电视</span>
+                <span class="list-width">马桶</span>
+                <span class="list-width">沙发</span>
+                <span class="list-width">电脑</span>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="categoryListPosition">
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;平板电视</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;马桶</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;沙发</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;电热水器</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;平衡车</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;扫地机器人</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;原汁机</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;冰箱</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;空调</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;女表</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;男装</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;男士手提包</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;男士西服</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;时尚男鞋</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;时尚女装</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;太阳眼镜</div>
+                <div class="categoryList"><i class="fa fa-link"></i>&nbsp;安全座椅</div>
+            </div>
+            <a href="">
+                <img src="image/lunbo1.jpg" id="img" alt="轮播图" class="imgPosition"/>
+            </a>
+
+            <script>
+                var num = 0;
+                function fun(){
+                    num ++;
+                    var nums= (num % 4) + 1;
+                    var img = document.getElementById("img");
+                    img.src ="image/lunbo" + nums + ".jpg";
+                }
+                setInterval(fun,3000);
+            </script>
+        </div>
+
+
+    </div>
+
+    <div class="allProduct">
+        <div class="productItem">
+            <span class="productTitle"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;平板电视</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="http://tmall.how2j.cn/productSingle_middle/676.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]夏普屏PANDA/熊猫 LE39D71S</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,874.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="http://tmall.how2j.cn/productSingle_middle/665.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]Changhong/长虹 65S1安卓智</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,874.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="http://tmall.how2j.cn/productSingle_middle/654.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]Hisense/海信 <br>LED40EC52</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,696.8</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="http://tmall.how2j.cn/productSingle_middle/643.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]Hisense/海信 <br>LED49EC32</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,236.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="http://tmall.how2j.cn/productSingle_middle/632.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]Konka/康佳 <br>LED32S1卧室32</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,565.25</span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="productList">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;马桶</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1324.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								纳蒂兰卡 1082卫浴洁具 钻石切边 坐
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,800.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1313.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								德国DGPOSY超漩式彩色马桶缓降坐便器
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,899.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1302.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								纳蒂兰卡1066卫浴漩冲虹吸式马桶350
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,595.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1291.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								箭牌马桶/ARROW AB1118脲醛盖
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,236.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1280.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								乐洁士智能马桶高品质全自动遥控感应一体式
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,595.66</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="productList1">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;电热水器</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/2581.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Haier/海尔 <br>EC8003-I/80
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,800.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/2570.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Vanward/万和 <br>DSCF50-C3
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,999.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/2559.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								哆啦A梦weber I2-80 威博电热
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,656.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/2548.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Haier/海尔 <br>EC6005-T+
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,326.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/2537.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Vatti/华帝 <br>DDF60-i1400
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,895.66</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="productList3">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;沙发</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1928.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[[热销]
+								雅居汇欧式沙发组合实木雕花客厅高档奢华
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;8,800.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1917.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								依然美佳欧式布艺沙发组合可拆洗新款实木雕
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;6,899.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1906.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								南台布艺沙发组合可拆洗简约现代客厅整装家
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,595.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1895.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								凯米蒂亚欧式真皮沙发组合客厅奢华转角皮艺
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;4,236.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/1884.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								新款布艺沙发 可拆洗大小户型客厅简约家居
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,565.10</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="productList4">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;平衡车</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3182.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								两轮平衡车双轮儿童思维漂移电动扭扭车智能
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;800.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3171.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								力达康成人电动滑板车折叠锂电池迷你型可折
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,899.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3160.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								瑞士米高micro <br>g-bike+ ch
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,595.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3138.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								乐行天下R1N智能电动平衡车双轮成人思维
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,236.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3149.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								乐途智能电动悬浮滑板车太空轮平行车蓝牙自
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,595.66</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="productList5">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;扫地机器人</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3796.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								公众智能扫地机器人家用全自动电动清洁地毯
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,800.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3785.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								莱克扫地吸尘器 家用超薄拖地机器人WR1
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,899.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3774.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								海尔拖地机器人家用全自动擦地机湿拖扫洗地
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,595.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3763.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Proscenic Swan天鹅扫地机器
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,236.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/3752.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								洁霸BF522多功能洗地机刷地机酒店家用
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,595.66</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="productList6">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;原汁机</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4401.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								惠而浦WJU-VS208J原汁机家用慢榨
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,800.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4390.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								AUX/奥克斯 AUX-Y3802原汁机
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,899.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4380.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Ranbem/瑞本611原汁机大口径低慢
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,595.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4369.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Whirlpool/ <br>惠而浦WJU-VP1
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,236.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4358.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Philips/飞利浦榨汁机原汁家用HR
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,595.66</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="productList7">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;冰箱</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4619.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Haier/海尔 <br>BCD-618WDVG
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,880.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4608.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								【阿里智能】Galanz/格兰仕 BCD
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,839.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4598.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Konka/康佳 BCD-558WEGY
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,585.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4587.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								FRESTECH/新飞 BCD-286W
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,286.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/4576.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								MeiLing/美菱 <br>BCD-560WU
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,595.66</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="productList8">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;空调</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5255.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Panasonic/松下 <br>KFR-36G
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;1,800.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5255.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Panasonic/松下 <br>KFR-36G
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,899.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5211.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								AUX/奥克斯 KFR-26GW/BpT
+
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,595.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5233.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								TCL KFRd-35GW/EP13 <br>大
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,236.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5222.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								Kelon/科龙 <br>KFR-26GW/EF
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,595.66</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="productList9">
+        <div class="productItem">
+            <span class="productTitle1"><i class="fa fa-chevron-circle-down"></i>&nbsp;&nbsp;&nbsp;女表</span>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5870.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								宾格手表正品女式精钢腕表大表盘全自动机械
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;800.25</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5859.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								浪铂正品长方形手表女表皮带时尚潮流石英表
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;899.66</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5848.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								罗宾 钢带女表 女士腕表 水钻夜光防水石
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;595.00</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5838.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								正港手表女四叶草防水手链表简约潮流学生女
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;2,236.36</span>
+            </div>
+            <div class="eachProduct">
+                <a href="">
+                    <img src="https://tmall.how2j.cn/productSingle_middle/5827.jpg" width="190px" height="200px">
+                </a>
+                <a href="">
+                    <span>[热销]
+								正品雷克斯韩版简约时尚潮流真皮石英情侣表
+
+								</span>
+                </a>
+                <span class="productPrice"><i class="fa fa-cny"></i>&nbsp;3,595.66</span>
+            </div>
+        </div>
+        <img src="image/end.png" alt="" class="endImagePosition">
+    </div>
+
+    <hr style="border:0;background-color:#e7e7e7;height:1px;">
+
+    <img src="image/img.png" alt="" style="margin-left: 260px;margin-top: 10px">
+
+    <hr style="border:0;background-color:#e7e7e7;height:1px;">
+
+    <img src="image/tianmao.png" alt="" class="tianmaoPosition">
+
+    <div class="footer">
+        <div class="footerList">
+            <a href=""><span style="color: white">关于天猫</span></a>
+            <a href=""><span style="color: white">帮助中心</span></a>
+            <a href=""><span style="color: white">开放平台</span></a>
+            <a href=""><span style="color: white">诚聘英才</span></a>
+            <a href=""><span style="color: white">联系我们</span></a>
+            <a href=""><span style="color: white">网站合作</span></a>
+            <a href=""><span style="color: white">法律声明</span></a>
+            <a href=""><span style="color: white">知识产权</span></a>
+            <a href=""><span style="color: white">廉正举报</span></a>
+        </div>
+
+        <div class="footerList">
+            <a href=""><span style="color: white">阿里巴巴集团</span></a>
+            <a href=""><span style="color: white">淘宝网</span></a>
+            <a href=""><span style="color: white">天猫</span></a>
+            <a href=""><span style="color: white">聚划算</span></a>
+            <a href=""><span style="color: white">全球速卖通</span></a>
+            <a href=""><span style="color: white">阿里巴巴国际交易市场</span></a>
+            <a href=""><span style="color: white">1688</span></a>
+            <a href=""><span style="color: white">阿里妈妈</span></a>
+            <a href=""><span style="color: white">阿里旅游</span></a>
+            <a href=""><span style="color: white">阿里云计算</span></a>
+            <a href=""><span style="color: white">阿里通信</span></a>
+            <a href=""><span style="color: white">YunOS</span></a>
+        </div>
+
+        <div class="footerList1">
+            <span style="color: #A4A4A4;font-size: x-small">增值电信业务经营许可证： 浙B2-20110446</span>
+            <span style="color: #A4A4A4;font-size: x-small">网络文化经营许可证：浙网文[2015]0295-065号</span>
+            <span style="color: #A4A4A4;font-size: x-small">互联网医疗保健信息服务 审核同意书 浙卫网审【2014】6号 </span>
+            <span style="color: #A4A4A4;font-size: x-small">互联网药品信息服务资质证书编号：浙-（经营性）-2012-0005</span>
+        </div>
+
+        <div class="footerList2">
+           <span style="color: #A4A4A4;font-size: x-small">© 2003-2021 TMALL.COM 版权所有</span>
+        </div>
+
+        <div class="copyrightPosition">
+            <img src="image/copyright1.png" alt="">
+            <img src="image/copyright2.png" alt="">
+        </div>
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

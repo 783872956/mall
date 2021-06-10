@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #999;
+    font-size: x-small;
+}
+
+.logo{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.form{
+    margin-left: 200px;
+    margin-top: 50px;
+    z-index: -1;
+}
+
+.input{
+    position: absolute;
+    left: 950px;
+    top: 200px;
+    width: 400px;
+    height: 300px;
+    background: white;
+}
+
+.input a:hover{
+    color: red;
+}
+
+.descColumn{
+    width: 20%;
+    float: left;
+    padding-left: 15px;
+
+}
+
+.descColumn .descColumnTitle{
+    color: #646464;
+    font-weight: bold;
+    font-size: 16px;
+}
