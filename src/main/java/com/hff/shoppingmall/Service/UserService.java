@@ -5,8 +5,9 @@ import com.hff.shoppingmall.Mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
-public class UserService {
+public class UserService  {
 
     @Autowired
     UserMapper userMapper;
@@ -19,4 +20,6 @@ public class UserService {
 
         return userMapper.selectUserByUser_id(user_id);
     }
+
+
 }
